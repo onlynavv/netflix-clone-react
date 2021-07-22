@@ -3,7 +3,7 @@ import Banner from './Banner'
 import './home.css'
 import MovieRow from './MovieRow'
 import Navbar from './Navbar'
-// import requests from './Request'
+import requests from './Request'
 
 const Home = () => {
     return (

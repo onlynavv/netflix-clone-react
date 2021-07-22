@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import './Navbar.css'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -23,8 +24,8 @@ const Navbar = () => {
     return (
         <div className={`navbar ${showNav && 'navbar-black'}`}>
             <div className="navbar-container">
-                <img className='navbar-logo' src='https://pngimg.com/uploads/netflix/netflix_PNG25.png' alt='logo'></img>
-                <img className='navbar-avatar' src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' alt='avatar'></img>
+                <Link to='/'><img className='navbar-logo' src='https://pngimg.com/uploads/netflix/netflix_PNG25.png' alt='logo'></img></Link>
+                <Link to='/profile'><img className='navbar-avatar' src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' alt='avatar'></img></Link>
             </div>
         </div>
     )
