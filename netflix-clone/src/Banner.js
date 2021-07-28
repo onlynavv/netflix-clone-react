@@ -29,7 +29,6 @@ const Banner = () => {
                 </h1>
                 <div className="banner-buttons">
                     <button className='banner-button'>Play</button>
-                    <button className='banner-button'>My list</button>
                 </div>
                 <h1 className="banner-description">
                     {despTruncate(movies?.overview,100) }

@@ -7,6 +7,7 @@ import Profile from "./Profile";
 import Login from "./Login";
 import {auth} from './firebase'
 import {useGlobalContext} from './context'
+import Spinner from 'react-spinkit'
 
 function App() {
 
@@ -23,6 +24,17 @@ function App() {
     })
     return activeUser
   }, [dispatch])
+
+  if(!user){
+    return(
+      <div className='loader-container'>
+        <div className='loader-content'>
+          <img src="https://pngimg.com/uploads/netflix/netflix_PNG25.png" alt="netflix-clone" />
+          <Spinner name='ball-spin-fade-loader' color='#E50914' fadeIn='none'></Spinner>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="App">
